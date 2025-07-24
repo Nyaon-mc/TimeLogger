@@ -1,0 +1,11 @@
+backup:
+  # 활성화 여부
+  enabled: true
+  # 초기화 여부
+  restore: false
+  # 요일: SUNDAY ~ SATURDAY
+  day-of-week: SUNDAY
+  # 0 ~ 23
+  hour: 0
+  # 0 ~ 59
+  minute: 0

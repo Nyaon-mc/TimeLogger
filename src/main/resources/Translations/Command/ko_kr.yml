@@ -1,2 +1,11 @@
 playtime:
   name: "플레이타임"
+
+check:
+  name: "확인"
+
+reset:
+  name: "초기화"
+
+resetall:
+  name: "전체초기화"

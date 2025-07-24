@@ -4,3 +4,5 @@ format:
   second: "<white>[second]s</white>"
 
 playtime: "<green>[player]'s playtime: <white>[time]</white>"
+reset: "<green>[player]'s playtime has been successfully reset.</green>"
+resetall: "<green>All playtimes have been successfully reset.</green>"

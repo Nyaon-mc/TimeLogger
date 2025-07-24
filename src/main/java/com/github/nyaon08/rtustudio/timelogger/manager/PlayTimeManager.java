@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.bukkit.scheduler.BukkitScheduler;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -55,6 +56,26 @@ public class PlayTimeManager {
         return storage.get("playtime", JSON.of("uuid", uuid.toString())).thenApply(result -> {
             if (result.isEmpty() || result.getFirst().isJsonNull()) return 0L;
             return result.getFirst().get("time").getAsLong();
+        }).join();
+    }
+
+    public void resetPlayTime(UUID uuid) {
+        Storage storage = plugin.getStorage();
+        storage.set("playtime", JSON.of("uuid", uuid.toString()), JSON.of("time", 0L)).join();
+        loginTimes.put(uuid, System.currentTimeMillis());
+    }
+
+    public void resetAllPlayTime() {
+        Storage storage = plugin.getStorage();
+        storage.set("playtime", JSON.of(), JSON.of()).join();
+        loginTimes.replaceAll((u, v) -> System.currentTimeMillis());
+    }
+
+    public List<UUID> getAllPlayers() {
+        Storage storage = plugin.getStorage();
+        return storage.get("playtime", JSON.of()).thenApply(result -> {
+            if (result.isEmpty() || result.getFirst().isJsonNull()) return null;
+            return result.stream().map(obj -> UUID.fromString(obj.get("uuid").getAsString())).toList();
         }).join();
     }
 
