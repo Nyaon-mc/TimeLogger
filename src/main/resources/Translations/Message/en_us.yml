@@ -1,0 +1,6 @@
+format:
+  hour: "<white>[hour]h </white>"
+  minute: "<white>[minute]m </white>"
+  second: "<white>[second]s</white>"
+
+playtime: "<green>[player]'s playtime: <white>[time]</white>"

@@ -1,0 +1,6 @@
+format:
+  hour: "<white>[hour]시 </white>"
+  minute: "<white>[minute]분 </white>"
+  second: "<white>[second]초</white>"
+
+playtime: "<green>[player]님의 접속 시간: <white>[time]</white>"
