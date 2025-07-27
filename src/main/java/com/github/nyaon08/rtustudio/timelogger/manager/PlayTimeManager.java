@@ -47,7 +47,6 @@ public class PlayTimeManager {
         storage.get("playtime", JSON.of("uuid", uuid.toString())).thenAccept(result -> {
             long totalTime = playTime + (result.isEmpty() || result.getFirst().isJsonNull() ? 0 : result.getFirst().get("time").getAsLong());
             storage.set("playtime", JSON.of("uuid", uuid.toString()), JSON.of("time", totalTime)).join();
-
         });
     }
 

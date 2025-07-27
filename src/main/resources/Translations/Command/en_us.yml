@@ -1,11 +1,9 @@
 playtime:
   name: "playtime"
-
-check:
-  name: "check"
-
-reset:
-  name: "reset"
-
-resetall:
-  name: "resetall"
+  commands:
+    check:
+      name: "check"
+    reset:
+      name: "reset"
+    resetall:
+      name: "resetall"
