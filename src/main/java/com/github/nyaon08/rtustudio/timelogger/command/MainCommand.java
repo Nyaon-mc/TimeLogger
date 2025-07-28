@@ -17,6 +17,7 @@ public class MainCommand extends RSCommand<TimeLogger> {
         this.timeLoggerConfig = plugin.getTimeLoggerConfig();
 
         registerCommand(new CheckCommand(plugin));
+        registerCommand(new PrintListCommand(plugin));
         registerCommand(new ResetCommand(plugin));
         registerCommand(new ResetAllCommand(plugin));
     }

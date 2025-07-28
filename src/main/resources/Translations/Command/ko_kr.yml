@@ -7,3 +7,5 @@ playtime:
       name: "초기화"
     resetall:
       name: "전체초기화"
+    all:
+      name: "전체확인"

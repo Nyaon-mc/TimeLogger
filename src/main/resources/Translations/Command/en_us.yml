@@ -7,3 +7,5 @@ playtime:
       name: "reset"
     resetall:
       name: "resetall"
+    all:
+      name: "all"
