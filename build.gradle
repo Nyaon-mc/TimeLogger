@@ -32,8 +32,6 @@ repositories {
     maven { url = "https://repo.codemc.io/repository/rtuserver/" } // RSFramework
 
     maven { url = "https://repo.extendedclip.com/content/repositories/placeholderapi/" } // PlaceholderAPI
-    maven { url = "https://repo.dmulloy2.net/repository/public/" } // ProtocolLib
-    maven { url = "https://repo.bg-software.com/repository/api/" } // Superiorskyblock2
 
     maven { url = "https://mvnrepository.com/artifact/org.projectlombok/lombok" } // Lombok
 }
@@ -60,8 +58,6 @@ dependencies {
     // ThirdParty Plugins
     compileOnly fileTree(dir: "libs", include: ["*.jar"])
     compileOnly "me.clip:placeholderapi:2.11.6"
-    compileOnly "com.comphenix.protocol:ProtocolLib:5.1.0"
-    compileOnly 'com.bgsoftware:SuperiorSkyblockAPI:2025.1'
 
     // Lombok
     compileOnly "org.projectlombok:lombok:1.18.38"
