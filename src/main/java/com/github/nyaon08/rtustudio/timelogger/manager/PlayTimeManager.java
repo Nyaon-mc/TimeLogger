@@ -73,7 +73,7 @@ public class PlayTimeManager {
     public List<UUID> getAllPlayers() {
         Storage storage = plugin.getStorage();
         return storage.get("playtime", JSON.of()).thenApply(result -> {
-            if (result.isEmpty() || result.getFirst().isJsonNull()) return null;
+            if (result.isEmpty() || result.getFirst().isJsonNull()) return loginTimes.keySet().stream().toList();
             return result.stream().map(obj -> UUID.fromString(obj.get("uuid").getAsString())).toList();
         }).join();
     }
